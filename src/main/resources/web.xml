@@ -1,0 +1,51 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<display-name>demo</display-name>
+	<listener>
+		<description>Spring's ContextLoaderListener</description>
+		<display-name>ContextLoaderListener</display-name>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:*.xml</param-value>
+	</context-param>
+	
+	<listener>
+	       <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+ 	</listener> 
+	   	
+	<servlet>
+  		<servlet-name>MyServlet</servlet-name>
+  		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+ 	</servlet> 
+ 	<servlet-mapping>
+	  	<servlet-name>MyServlet</servlet-name>
+	  	<url-pattern>/ws/*</url-pattern>
+ 	</servlet-mapping> 
+ 	
+ 	<servlet>
+       	<servlet-name>LogbackServlet</servlet-name>
+       	<servlet-class>com.example.demo.config.LogbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+       	<servlet-name>LogbackServlet</servlet-name>
+       	<url-pattern>/loglevel</url-pattern>
+    </servlet-mapping>
+	<filter>
+		<filter-name>MyGatewayFilter</filter-name>
+		<display-name>MyGatewayFilter</display-name>
+		<description>lol</description>
+		<filter-class>com.example.demo.config.MyGatewayFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyGatewayFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app> -->

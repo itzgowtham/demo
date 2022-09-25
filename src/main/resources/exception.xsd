@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:e="http://www.example.com/exception"
+           targetNamespace="http://www.example.com/exception" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xs:complexType name="Exceptions">
+    	<xs:sequence>
+    		<xs:element name="error" type="e:Error" minOccurs="0"  maxOccurs="unbounded"/>
+		</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Error">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="reason" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="ExceptionList" type="e:Exceptions" />
+    
+</xs:schema>
