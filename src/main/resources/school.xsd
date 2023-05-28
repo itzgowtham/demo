@@ -1,5 +1,6 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/xml/school"
-           targetNamespace="http://www.example.com/xml/school" elementFormDefault="qualified">
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/schema"
+           targetNamespace="http://www.example.com/schema" elementFormDefault="qualified">
 
     <xs:element name="StudentDetailsRequest">
         <xs:complexType>

@@ -17,3 +17,19 @@ singleServerConfig:
 threads: 16
 nettyThreads: 64
 #codec: !org.redisson.codec.JsonJacksonCodec {}
+
+management:  endpoints:    web:
+      base-path: /      exposure:        include: health,env,loggers,logfile,refresh,info
+  endpoint:
+    health:      show-details: always
+    info:      enabled: true
+        
+mq:
+  servers:
+    - queueManager: QUEUEMANAGERNAME
+      channel: MYCHANNEL
+      hostName: myaddress.com
+      port: 8080
+      user: root
+  replyQ: REPLYQ
+  reqQ: REQUESTQ

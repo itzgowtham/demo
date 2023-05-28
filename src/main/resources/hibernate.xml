@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="database name"/>
+		<property name="url" value="database url"></property>
+		<property name="username" value="root"/>
+		<property name="password" value="root"/>
+	</bean>
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSurce" ref="dataSource"/>
+		<property name="packagesToScan" value="com.example.repository"/>
+		<property name="properties" ref="properties"/>
+	</bean>
+	<bean id="properties" class="java.util.Properties">
+		This is just for example
+		<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9Dialect"/>
+		<property name="hibernate.show_sql" value="true"></property>
+		<property name="hibernate.format_sql" value="true"></property>
+	</bean>
+
+</beans>

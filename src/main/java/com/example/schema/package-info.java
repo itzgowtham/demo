@@ -5,5 +5,5 @@
 // Generated on: 2022.10.02 at 07:58:04 PM IST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.com/exception", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.example.exception;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.example.com/schema", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.example.schema;
